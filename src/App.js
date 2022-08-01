@@ -9,42 +9,42 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Resume from './component/Resume';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route index element={<AppHomePage />} />
-          <Route path="*" element={<AppContentPage />} />
-        </Routes>
+        <AppHeader />
+        <AppBody />
       </BrowserRouter>
     </div>
   );
 }
 
-function AppHomePage() {
+function AppHeader() {
   return (
-    <div style={{backgroundImage: `url(${HeaderImage})`}}>
-      <AppNavBar theme='dark'/>
-      <AppHomeBody />
-    </div>
+    <Routes>
+      <Route index element={
+        <header style={{backgroundImage: `url(${HeaderImage})`}}>
+          <AppNavBar variant='dark' bg='transparent' />
+          <AppHomeHeader />
+        </header>
+      } />
+      <Route path="*" element={    
+        <header>
+          <AppNavBar variant='light' bg='light'/>
+        </header>
+      } />
+    </Routes>
   );
 }
 
-function AppContentPage() {
-  return (
-    <div>
-      <AppNavBar theme='light'/>
-      <AppContentBody />
-    </div>
-  );
-}
 
 function AppNavBar(props) {
-  var theme = (props.theme === 'dark') ? 'dark' : 'light';
+  var variant = (props.variant === 'dark') ? 'dark' : 'light';
   return (
-    <Navbar className={'navbar navbar-'+theme} bg='transparent' expand="lg" >
+    <Navbar variant={variant} bg={props.bg} expand="md" >
       <Container>
         <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -64,7 +64,7 @@ function AppNavBar(props) {
   );
 }
 
-function AppHomeBody() {
+function AppHomeHeader() {
   return (
     <div>
       Home Header
@@ -72,12 +72,15 @@ function AppHomeBody() {
   );
 }
 
-function AppContentBody() {
+function AppBody() {
   return (
-    <Routes>
-      <Route path='resume' element={<div>Resume</div>} />
-      <Route path='project/*' element={<div>Project</div>} />
-    </Routes>
+    <Container fluid='md'>
+      <Routes>
+        <Route index element={<div>Home</div>} />
+        <Route path='resume' element={<Resume />} />
+        <Route path='project/*' element={<div>Project</div>} />
+      </Routes>
+    </Container>
   );
 }
 

@@ -48,8 +48,8 @@ function AppNavBar(props) {
       <Container>
         <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className='navbar-nav justify-content-end'>
-          <Nav className="me-auto">
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/resume">Resume</Nav.Link>
             <NavDropdown title="Projects" id="basic-nav-dropdown">
@@ -75,11 +75,11 @@ function AppHomeHeader() {
 function AppBody() {
   return (
     <Container fluid='md'>
-      <Routes>
-        <Route index element={<div>Home</div>} />
-        <Route path='resume' element={<Resume />} />
-        <Route path='project/*' element={<div>Project</div>} />
-      </Routes>
+    <Routes>
+      <Route index element={<div>Home</div>} />
+      <Route path='resume' element={<Resume />} />
+      <Route path='project/*' element={<div>Project</div>} />
+    </Routes>
     </Container>
   );
 }

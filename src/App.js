@@ -8,8 +8,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Resume from './component/Resume';
+
+import Home from './component/Home';
 import HomeHeader from './component/HomeHeader';
+import Resume from './component/Resume';
+import Project from './component/Project';
 
 function App() {
   return (
@@ -46,7 +49,7 @@ function AppNavBar(props) {
   return (
     <Navbar variant={variant} bg={props.bg} expand="md" stlye={style}>
       <Container>
-        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/">My Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
@@ -71,14 +74,11 @@ function AppBody() {
         <Route index element={<HomeHeader />} />
       </Routes>
       <Container>
-        <div class="shadow p-3 mb-5 bg-body rounded" 
-        style={{height: "100vh", backgroundColor:"#FFFFFFFF", transform:"translate(0px, -5%)"}}>      
           <Routes>
-            <Route index element={<div>Home</div>} />
+            <Route index element={<Home />} />
             <Route path='resume' element={<Resume />} />
-            <Route path='project/*' element={<div>Project</div>} />
+            <Route path='project/*' element={<Project />} />
           </Routes>
-        </div>
       </Container>
     </Container>
   );

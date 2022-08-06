@@ -8,9 +8,9 @@ class Home extends React.Component {
         return (
             <div>
                 <HomeHeader />
-                <Container>
+                <Container style={{transform:"translate(0px, -60px)", marginBottom:"-60px"}}>
                     <div className="shadow p-3 mb-5 bg-body rounded" 
-                    style={{height: "100vh", backgroundColor:"#FFFFFFFF", transform:"translate(0px, -8%)"}}>      
+                    style={{height: "100vh", backgroundColor:"white"}}>      
                         <div className='h2' align='left'>Home</div>
                     </div>
                 </Container>

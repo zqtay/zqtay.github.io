@@ -6,7 +6,7 @@ class Resume extends React.Component {
         return (
             <Container>
                 <div className="shadow p-3 mt-3 mb-5 bg-body rounded" 
-                style={{height: "100vh", backgroundColor:"#FFFFFFFF"}}>      
+                style={{height: "100vh", backgroundColor:"white"}}>      
                     <div className='h2' align='left'>Resume</div>
                 </div>
             </Container>

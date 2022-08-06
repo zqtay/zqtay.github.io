@@ -66,7 +66,7 @@ function AppNavBar(props) {
   return (
     <Navbar collapseOnSelect variant={variant} bg={props.bg} expand="md" stlye={style}>
       <Container>
-        <Navbar.Brand href="#">My Portfolio</Navbar.Brand>
+        <Navbar.Brand href="#" onClick={() => props.handleClick("home")}>My Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" onSelect={props.handleClick}>

@@ -48,7 +48,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className='sticky-top'>
+        <header className='sticky-top shadow'>
           <AppNavBar variant='dark' bg='dark' handleClick={this.setCurrentBody} />
         </header>
         <AppBody currentBody={this.state.currentBody} />

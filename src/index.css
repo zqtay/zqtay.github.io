@@ -12,10 +12,22 @@ code {
     monospace;
 }
 
-a {
+header .nav-link {
+  color: lightgrey !important
+}
+
+header .nav-link:hover {
+  color: white !important
+}
+
+header .nav-item a.dropdown-item:focus, header .nav-item a.dropdown-item.active {
+  background-color: lightskyblue !important
+}
+
+footer a {
   color:black
 }
 
-a:focus,a:hover{
+footer a:focus, footer a:hover{
   color:lightskyblue
 }

@@ -13,6 +13,8 @@ import Home from './component/Home';
 import Resume from './component/Resume';
 import Project from './component/Project';
 
+import DataUtil from "./data/DataUtil";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -91,11 +93,13 @@ function AppBody(props) {
 }
 
 function AppFooter(props) {
+  var links = DataUtil.getLinks();
+  var user = DataUtil.getUser();
   return (
     <Container>
       <Row className="justify-content-center mb-3">
         <Col xs="auto" className="px-3">
-          <a href="">
+          <a href={links.linkedin}>
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
               <i className="fa fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -103,7 +107,7 @@ function AppFooter(props) {
           </a>
         </Col>
         <Col xs="auto" className="px-3">
-          <a href="">
+          <a href={links.github}>
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
               <i className="fa fa-brands fa-github fa-stack-1x fa-inverse"></i>
@@ -111,7 +115,7 @@ function AppFooter(props) {
           </a>
         </Col>
         <Col xs="auto" className="px-3">
-          <a href="">
+          <a href={links.email}>
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
               <i className="fa fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
@@ -119,7 +123,7 @@ function AppFooter(props) {
           </a>
         </Col>
       </Row>
-      <p className="copyright text-muted">Copyright © Your Website 2022</p>
+      <p className="copyright text-muted">{`Copyright © ${user.firstName} ${user.lastName} 2022`}</p>
     </Container>
   );
 }

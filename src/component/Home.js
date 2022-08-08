@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import HomeHeader from './HomeHeader';
 import ProfileImage from '../profile.jpg';
 
+import DataUtil from "../data/DataUtil";
+
 class Home extends React.Component {
     render() {
         return (
@@ -17,6 +19,7 @@ class Home extends React.Component {
                             </div>
                         </div>     
                         <div className='h2' align='left'>Home</div>
+                        <p style={{textAlign:"justify", fontSize:"20px"}}>{DataUtil.getHome().contentText}</p>
                     </div>
                 </Container>
             </div>

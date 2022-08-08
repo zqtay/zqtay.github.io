@@ -24,10 +24,10 @@ header .nav-item a.dropdown-item:focus, header .nav-item a.dropdown-item.active 
   background-color: lightskyblue !important
 }
 
-footer a {
+a {
   color:black
 }
 
-footer a:focus, footer a:hover{
+a:focus, a:hover{
   color:lightskyblue
 }

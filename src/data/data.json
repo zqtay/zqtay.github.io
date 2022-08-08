@@ -1,0 +1,63 @@
+{
+    "user": {
+        "firstName": "First",
+        "lastName": "Last",
+        "title": "Title"
+    },
+    "home": {
+        "headerTitle": "Header title",
+        "headerSubtitle": "Header subtitle",
+        "contentText": "Content"
+    },
+    "resume": {
+        "opening": "Opening",
+        "experience": [
+            {
+                "company": "Company",
+                "title": "Title",
+                "dateStart": "XXX XXXX",
+                "dateEnd": "XXX XXXX",
+                "location": "Location",
+                "description": [
+                    "Desc1",
+                    "Desc2"
+                ]
+            }
+        ],
+        "education": [
+            {
+                "institute": "Institute",
+                "title": "Title",
+                "dateStart": "XXX XXXX",
+                "dateEnd": "XXX XXXX",
+                "location": "Location",
+                "description": "Description"
+            }
+        ],
+        "skill": [
+            {
+                "name": "Skill",
+                "level": "3"
+            }
+        ],
+        "language": [
+            {
+                "name": "Language",
+                "level": "3"
+            }
+        ]
+    },
+    "projects": [
+        {
+            "title": "Project",
+            "description": "Description",
+            "link": "/"
+        }
+    ],
+    "links": {
+        "linkedin": "/",
+        "github": "/",
+        "email": "/",
+        "resume": "/"
+    }
+}

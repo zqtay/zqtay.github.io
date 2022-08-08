@@ -13,6 +13,8 @@ import Home from './component/Home';
 import Resume from './component/Resume';
 import Project from './component/Project';
 
+import DataUtil from "./data/DataUtil";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -48,7 +50,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className='sticky-top'>
+        <header className='sticky-top shadow'>
           <AppNavBar variant='dark' bg='dark' handleClick={this.setCurrentBody} />
         </header>
         <AppBody currentBody={this.state.currentBody} />
@@ -66,7 +68,7 @@ function AppNavBar(props) {
   return (
     <Navbar collapseOnSelect variant={variant} bg={props.bg} expand="md" stlye={style}>
       <Container>
-        <Navbar.Brand href="#">My Portfolio</Navbar.Brand>
+        <Navbar.Brand href="#" onClick={() => props.handleClick("home")}>My Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" onSelect={props.handleClick}>
@@ -91,35 +93,37 @@ function AppBody(props) {
 }
 
 function AppFooter(props) {
+  var links = DataUtil.getLinks();
+  var user = DataUtil.getUser();
   return (
     <Container>
       <Row className="justify-content-center mb-3">
         <Col xs="auto" className="px-3">
-          <a href="">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
+          <a href={links.linkedin}>
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-circle fa-stack-2x"></i>
+              <i className="fa fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
             </span>
           </a>
         </Col>
         <Col xs="auto" className="px-3">
-          <a href="">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-brands fa-github fa-stack-1x fa-inverse"></i>
+          <a href={links.github}>
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-circle fa-stack-2x"></i>
+              <i className="fa fa-brands fa-github fa-stack-1x fa-inverse"></i>
             </span>
           </a>
         </Col>
         <Col xs="auto" className="px-3">
-          <a href="">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
+          <a href={links.email}>
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-circle fa-stack-2x"></i>
+              <i className="fa fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
             </span>
           </a>
         </Col>
       </Row>
-      <p class="copyright text-muted">Copyright © Your Website 2022</p>
+      <p className="copyright text-muted">{`Copyright © ${user.firstName} ${user.lastName} 2022`}</p>
     </Container>
   );
 }

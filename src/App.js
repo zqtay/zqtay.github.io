@@ -96,30 +96,30 @@ function AppFooter(props) {
       <Row className="justify-content-center mb-3">
         <Col xs="auto" className="px-3">
           <a href="">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-circle fa-stack-2x"></i>
+              <i className="fa fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
             </span>
           </a>
         </Col>
         <Col xs="auto" className="px-3">
           <a href="">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-brands fa-github fa-stack-1x fa-inverse"></i>
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-circle fa-stack-2x"></i>
+              <i className="fa fa-brands fa-github fa-stack-1x fa-inverse"></i>
             </span>
           </a>
         </Col>
         <Col xs="auto" className="px-3">
           <a href="">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-circle fa-stack-2x"></i>
+              <i className="fa fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
             </span>
           </a>
         </Col>
       </Row>
-      <p class="copyright text-muted">Copyright © Your Website 2022</p>
+      <p className="copyright text-muted">Copyright © Your Website 2022</p>
     </Container>
   );
 }

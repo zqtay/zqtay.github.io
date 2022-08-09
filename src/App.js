@@ -13,7 +13,7 @@ import Home from './component/Home';
 import Resume from './component/Resume';
 import Projects from './component/Projects';
 
-import DataUtil from "./data/DataUtil";
+import DataUtil from "./user/DataUtil";
 
 class App extends React.Component {
   constructor(props) {

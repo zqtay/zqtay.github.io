@@ -1,14 +1,11 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
+import DataUtil from "../user/DataUtil";
+
 class Projects extends React.Component {
     render() {
-        var projects = [{
-            "title": "Project",
-            "description": "Description",
-            "link": "/",
-            "imageLink": ""
-        }];
+        var projects = DataUtil.getProjects();
         return (
             <Container>
                 <div className="shadow p-3 mt-3 mb-5 bg-body rounded" style={{backgroundColor:"white"}}>      

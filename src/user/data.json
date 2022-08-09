@@ -51,7 +51,8 @@
         {
             "title": "Project",
             "description": "Description",
-            "link": "/"
+            "link": "/",
+            "imageLink": "/"
         }
     ],
     "links": {

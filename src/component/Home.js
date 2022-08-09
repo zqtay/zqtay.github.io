@@ -17,7 +17,6 @@ class Home extends React.Component {
                                 style={{paddingTop:"100%", maxWidth:"100%",backgroundImage:`url(${ProfileImage})`}}>
                             </div>
                         </div>     
-                        <div className='h2' align='left'>Home</div>
                         <p style={{textAlign:"justify", fontSize:"20px"}}>{DataUtil.getHome().contentText}</p>
                     </div>
                 </Container>

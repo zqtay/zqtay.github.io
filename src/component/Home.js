@@ -2,9 +2,8 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 
 import HomeHeader from './HomeHeader';
-import ProfileImage from '../profile.jpg';
-
-import DataUtil from "../data/DataUtil";
+import ProfileImage from '../user/profile.jpg';
+import DataUtil from "../user/DataUtil";
 
 class Home extends React.Component {
     render() {

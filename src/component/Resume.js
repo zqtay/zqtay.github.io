@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
-import DataUtil from "../data/DataUtil";
+import DataUtil from "../user/DataUtil";
 
 class Resume extends React.Component {
     render() {

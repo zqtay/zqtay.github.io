@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import HeaderImage from '../header.jpg';
 
-import DataUtil from "../data/DataUtil";
+import HeaderImage from '../user/header.jpg';
+import DataUtil from "../user/DataUtil";
 
 class HomeHeader extends React.Component {
     render() {

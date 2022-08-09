@@ -6,11 +6,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Row from 'react-bootstrap/Row';
 
-import Home from './component/Home';
-import Resume from './component/Resume';
+import About from './component/About';
 import Projects from './component/Projects';
 
 import DataUtil from "./user/DataUtil";
@@ -18,18 +16,15 @@ import DataUtil from "./user/DataUtil";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentBody: <Home /> };
+    this.state = { currentBody: <About /> };
     this.setCurrentBody = this.setCurrentBody.bind(this)
   }
 
   setCurrentBody(selectedKey) {
-    var body = <Home />;
+    var body = <About />;
     switch (selectedKey) {
-      case "home":
-        body = <Home />;
-        break;
-      case "resume":
-        body = <Resume />;
+      case "About":
+        body = <About />;
         break;
       case "projects":
         body = <Projects />;
@@ -66,12 +61,11 @@ function AppNavBar(props) {
   return (
     <Navbar collapseOnSelect variant={variant} bg={props.bg} expand="md" stlye={style}>
       <Container>
-        <Navbar.Brand href="#" onClick={() => props.handleClick("home")}>My Portfolio</Navbar.Brand>
+        <Navbar.Brand href="#" onClick={() => props.handleClick("about")}>My Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" onSelect={props.handleClick}>
-            <Nav.Link href="#" eventKey="home">Home</Nav.Link>
-            <Nav.Link href="#" eventKey="resume">Resume</Nav.Link>
+            <Nav.Link href="#" eventKey="about">About</Nav.Link>
             <Nav.Link href="#" eventKey="projects">Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -31,9 +31,7 @@ class App extends React.Component {
       case "resume":
         body = <Resume />;
         break;
-      case "project1":
-      case "project2":
-      case "project3":
+      case "projects":
         body = <Projects />;
         break;
       default:
@@ -74,11 +72,7 @@ function AppNavBar(props) {
           <Nav className="ms-auto" onSelect={props.handleClick}>
             <Nav.Link href="#" eventKey="home">Home</Nav.Link>
             <Nav.Link href="#" eventKey="resume">Resume</Nav.Link>
-            <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#" eventKey="project1">Project 1</NavDropdown.Item>
-              <NavDropdown.Item href="#" eventKey="project2">Project 2</NavDropdown.Item>
-              <NavDropdown.Item href="#" eventKey="project3">Project 3</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="#" eventKey="projects">Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
-class Project extends React.Component {
+class Projects extends React.Component {
     render() {
         return (
             <Container>
@@ -14,4 +14,4 @@ class Project extends React.Component {
     }
 }
 
-export default Project;
+export default Projects;

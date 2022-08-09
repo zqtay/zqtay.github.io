@@ -11,7 +11,7 @@ import Row from 'react-bootstrap/Row';
 
 import Home from './component/Home';
 import Resume from './component/Resume';
-import Project from './component/Project';
+import Projects from './component/Projects';
 
 import DataUtil from "./data/DataUtil";
 
@@ -34,7 +34,7 @@ class App extends React.Component {
       case "project1":
       case "project2":
       case "project3":
-        body = <Project />;
+        body = <Projects />;
         break;
       default:
         break;

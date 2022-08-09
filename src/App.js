@@ -11,9 +11,9 @@ import Row from 'react-bootstrap/Row';
 
 import Home from './component/Home';
 import Resume from './component/Resume';
-import Project from './component/Project';
+import Projects from './component/Projects';
 
-import DataUtil from "./data/DataUtil";
+import DataUtil from "./user/DataUtil";
 
 class App extends React.Component {
   constructor(props) {
@@ -31,10 +31,8 @@ class App extends React.Component {
       case "resume":
         body = <Resume />;
         break;
-      case "project1":
-      case "project2":
-      case "project3":
-        body = <Project />;
+      case "projects":
+        body = <Projects />;
         break;
       default:
         break;
@@ -74,11 +72,7 @@ function AppNavBar(props) {
           <Nav className="ms-auto" onSelect={props.handleClick}>
             <Nav.Link href="#" eventKey="home">Home</Nav.Link>
             <Nav.Link href="#" eventKey="resume">Resume</Nav.Link>
-            <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#" eventKey="project1">Project 1</NavDropdown.Item>
-              <NavDropdown.Item href="#" eventKey="project2">Project 2</NavDropdown.Item>
-              <NavDropdown.Item href="#" eventKey="project3">Project 3</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="#" eventKey="projects">Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

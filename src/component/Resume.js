@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
-import DataUtil from "../data/DataUtil";
+import DataUtil from "../user/DataUtil";
 
 class Resume extends React.Component {
     render() {
@@ -43,20 +43,28 @@ class Resume extends React.Component {
 }
 
 function Header(props) {
+    var downloadIcon = null;
+    if (props.link === null || props.link === "") {
+        downloadIcon = <div className="d-flex col-4" />
+    }
+    else {
+        downloadIcon =                 
+        <div className="d-flex col-4" style={{marginTop:"-10px"}}>
+            <a className="ms-auto" href={props.link}>
+                <span className="fa-stack fa-xl">
+                    <i className="fa fa-circle fa-stack-2x"></i>
+                    <i className="fa-solid fa-file-arrow-down fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </div>
+    }
     return (
         <div align='center'>
             <div className="display-5">{`${props.data.lastName}, ${props.data.firstName}`}</div>
             <div className="row justify-content-between">
                 <div className="col-4" />
                 <div className="col-4" style={{fontSize:"25px"}}>{`${props.data.title}`}</div>
-                <div className="d-flex col-4" style={{marginTop:"-10px"}}>
-                    <a className="ms-auto" href={props.link}>
-                        <span className="fa-stack fa-xl">
-                            <i className="fa fa-circle fa-stack-2x"></i>
-                            <i className="fa-solid fa-file-arrow-down fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </div>
+                {downloadIcon}
             </div>
         </div>
     );

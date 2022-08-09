@@ -11,7 +11,7 @@ class HomeHeader extends React.Component {
             <Container fluid style={{backgroundImage: `url(${HeaderImage})`}}>
                 <div className="row align-items-center" style={{height: "40vh", backgroundColor:"#00000000"}}>
                     <div className="col-10 mx-auto text-center" style={{color:"white"}}>
-                        <h2>{home.headerTitle}</h2>
+                        <div className="display-5">{home.headerTitle}</div>
                         <p className="lead">{home.headerSubtitle}</p>
                     </div>
                 </div>

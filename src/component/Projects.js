@@ -8,7 +8,7 @@ class Projects extends React.Component {
         var projects = DataUtil.getProjects();
         return (
             <Container>
-                <div className="shadow p-3 mt-3 mb-5 bg-body rounded" style={{backgroundColor:"white"}}>      
+                <div id="content-panel" className="shadow p-3 mt-3 mb-5 bg-body rounded" style={{backgroundColor:"white"}}>      
                     <div className="display-5" align="center">Projects</div>
                     <hr />
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
@@ -34,7 +34,7 @@ function Project(props) {
                 {image}
                 <div className="card-body">
                     <h5 className="card-title">{props.data.title}</h5>
-                    <p className="card-text">{props.data.description}</p>
+                    <p className="card-text" style={{textAlign:"justify"}}>{props.data.description}</p>
                 </div>
             </a>
         </div>

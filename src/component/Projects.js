@@ -34,7 +34,7 @@ function Project(props) {
                 {image}
                 <div className="card-body">
                     <h5 className="card-title">{props.data.title}</h5>
-                    <p className="card-text">{props.data.description}</p>
+                    <p className="card-text" style={{textAlign:"justify"}}>{props.data.description}</p>
                 </div>
             </a>
         </div>

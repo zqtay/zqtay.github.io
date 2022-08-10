@@ -12,11 +12,12 @@ class About extends React.Component {
             <div>
                 <Banner data={DataUtil.getHome()} image={BannerImage}/>
                 <Container style={{marginTop:"-80px"}}>
-                    <div id="content-panel" className="shadow p-3 mb-5 bg-body rounded" style={{backgroundColor:"white"}}>
+                    <div id="content-panel" className="shadow p-3 p-lg-4 mb-5 bg-body rounded" style={{backgroundColor:"white"}}>
                         <DownloadButton link={DataUtil.getLinks().resume} />
                         <Header data={DataUtil.getUser()} image={ProfileImage} />
                         <hr />
                         <Resume data={DataUtil.getResume()} />
+                        <hr className="d-none d-lg-block" />
                     </div>
                 </Container>
             </div>
@@ -45,14 +46,17 @@ function Header(props) {
                 </div>
             </div>     
             <div className="col col-lg-auto ms-lg-4">
-                <div id="user-name" className="display-5 text-lg-start">{`${props.data.lastName}, ${props.data.firstName}`}</div>
-                <div id="user-title" className="text-lg-start" style={{fontSize:"2rem"}}>{props.data.title}</div>
+                <div id="user-name" className="display-5 text-lg-start" style={{fontWeight:"400"}}>{`${props.data.lastName}, ${props.data.firstName}`}</div>
+                <div id="user-title" className="display fs-2 fw-light text-lg-start">{props.data.title}</div>
             </div>
         </div>
     );
 }
 
 function DownloadButton(props) {
+    if (props.link === null || props.link === "") {
+        return null;
+    }
     return (
         <div className="d-flex flex-column align-items-end w-100">
             <a id="button-download-file" className="position-absolute" href={props.link}>

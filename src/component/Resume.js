@@ -4,8 +4,8 @@ class Resume extends React.Component {
     render() {
         var resume = this.props.data;
         return (
-            <div className="row text-start">
-                <div className="col-lg-4 me-lg">
+            <div className="row text-start gx-lg-5" style={{textAlign:"justify"}}>
+                <div className="col-lg-4">
                     <div id="resume-about">
                         <h4>About</h4>
                         <Opening data={resume.opening} />
@@ -21,7 +21,7 @@ class Resume extends React.Component {
                     </div>
                     <hr className="d-block d-lg-none" />
                 </div>
-                <div className="col-lg-8 ms-lg">
+                <div className="col-lg-8">
                     <div id="resume-experience">
                         <h4>Experience</h4>
                         {resume.experience.map((d) => <Experience data={d} />)}
@@ -31,6 +31,7 @@ class Resume extends React.Component {
                         <h4>Education</h4>
                         {resume.education.map((d) => <Education data={d} />)}
                     </div>
+                    <hr className="d-block d-lg-none" />
                 </div>
             </div>
         );

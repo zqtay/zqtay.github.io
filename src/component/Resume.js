@@ -4,8 +4,8 @@ class Resume extends React.Component {
     render() {
         var resume = this.props.data;
         return (
-            <div className="row text-start gx-lg-5" style={{textAlign:"justify"}}>
-                <div className="col-lg-4">
+            <div className="row text-start gx-lg-5">
+                <div className="col-lg-4" style={{textAlign:"justify"}}>
                     <div id="resume-about">
                         <h4>About</h4>
                         <Opening data={resume.opening} />
@@ -54,7 +54,7 @@ function Experience(props) {
     var desc = null
     if (Array.isArray(props.data.description)) {
         desc = <ul>
-            {props.data.description.map((d) => <li>{d}</li>)}
+            {props.data.description.map((d, i) => <li key={i}>{d}</li>)}
         </ul>
     }
     else {
@@ -63,11 +63,15 @@ function Experience(props) {
         </div>
     }
     return (
-        <div>
-            <h5>{props.data.title}</h5>
-            <h6>{props.data.company}</h6>
-            <div className="text-muted">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
-            {desc}
+        <div className="row mb-3">
+            <div className="col-lg-2 d-none d-lg-block" style={{textAlign:"left"}}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+            <div className="col-lg-10" style={{textAlign:"justify"}}>
+                <div className="h5 mb-0">{`${props.data.title}`}</div>
+                <div className="fs-6">{`${props.data.company}, ${props.data.location}`}</div>
+                <div className="d-lg-none fw-light">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+                <div className="mb-1" />
+                {desc}
+            </div>
         </div>
     );
 }
@@ -76,7 +80,7 @@ function Education(props) {
     var desc = null
     if (Array.isArray(props.data.description)) {
         desc = <ul>
-            {props.data.description.map((d) => <li>{d}</li>)}
+            {props.data.description.map((d, i) => <li key={i}>{d}</li>)}
         </ul>
     }
     else {
@@ -85,11 +89,15 @@ function Education(props) {
         </div>
     }
     return (
-        <div>
-            <h5>{props.data.institute}</h5>
-            <h6>{props.data.title}</h6>
-            <div className="text-muted">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
-            {desc}
+        <div className="row mb-3">
+            <div className="col-lg-2 d-none d-lg-block" style={{textAlign:"left"}}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+            <div className="col-lg-10" style={{textAlign:"justify"}}>
+                <div className="h5 mb-0">{`${props.data.title}`}</div>
+                <div className="fs-6">{`${props.data.institute}, ${props.data.location}`}</div>
+                <div className="d-lg-none fw-light">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+                <div className="mb-1" />
+                {desc}
+            </div>
         </div>
     );
 }

@@ -11,7 +11,7 @@ class About extends React.Component {
         return (
             <div>
                 <Banner data={DataUtil.getHome()} image={BannerImage}/>
-                <Container style={{marginTop:"-80px"}}>
+                <Container style={{marginTop:"-120px"}}>
                     <div id="content-panel" className="shadow p-3 p-lg-4 mb-5 bg-body rounded" style={{backgroundColor:"white"}}>
                         <DownloadButton link={DataUtil.getLinks().resume} />
                         <Header data={DataUtil.getUser()} image={ProfileImage} />
@@ -27,8 +27,8 @@ class About extends React.Component {
 
 function Banner(props) {
     return (
-        <Container id="banner" fluid style={{backgroundImage: `url(${props.image})`}}>
-            <div className="row align-items-center" style={{height: "40vh", backgroundColor:"#00000000", marginTop:"-80px"}}>
+        <Container id="banner" fluid style={{backgroundImage: `url(${props.image})`, backgroundSize:"cover"}}>
+            <div className="row align-items-center" style={{height: "50vh", backgroundColor:"#00000000", marginTop:"-120px"}}>
                 <div className="col-10 mx-auto text-center" style={{color:"white"}}>
                     <div id="banner-title" className="display-5">{props.data.headerTitle}</div>
                     <p id="banner-subtitle" className="lead">{props.data.headerSubtitle}</p>
@@ -42,7 +42,7 @@ function Header(props) {
     return (
         <div className="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center">
             <div id="image-profile" className="col-lg px-0 rounded-circle border border-4 border-white shadow-sm" style={{width:"45%", minWidth:"120px", maxWidth:"180px"}}>
-                <div className="rounded-circle" style={{paddingTop:"100%", maxWidth:"100%",backgroundImage:`url(${props.image})`}}>
+                <div className="rounded-circle" style={{paddingTop:"100%", maxWidth:"100%",backgroundImage:`url(${props.image})`, backgroundSize:"contain"}}>
                 </div>
             </div>     
             <div className="col col-lg-auto ms-lg-4">

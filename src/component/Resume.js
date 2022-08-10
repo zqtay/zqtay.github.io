@@ -6,28 +6,28 @@ class Resume extends React.Component {
         return (
             <div className="row text-start">
                 <div className="col-lg-4 me-lg">
-                    <div>
+                    <div id="resume-about">
                         <h4>About</h4>
                         <Opening data={resume.opening} />
                     </div>
-                    <div>
+                    <div id="resume-skills">
                         <h4>Skills</h4>
                         {resume.skill.map((d) => <Skill data={d} />)}
                     </div>
                     <hr />
-                    <div>
+                    <div id="resume-languages">
                         <h4>Languages</h4>
                         {resume.language.map((d) => <Skill data={d} />)}
                     </div>
                     <hr className="d-block d-lg-none" />
                 </div>
                 <div className="col-lg-8 ms-lg">
-                    <div>
+                    <div id="resume-experience">
                         <h4>Experience</h4>
                         {resume.experience.map((d) => <Experience data={d} />)}
                     </div>
                     <hr />
-                    <div>
+                    <div id="resume-education">
                         <h4>Education</h4>
                         {resume.education.map((d) => <Education data={d} />)}
                     </div>

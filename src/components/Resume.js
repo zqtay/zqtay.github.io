@@ -12,24 +12,24 @@ class Resume extends React.Component {
                     </div>
                     <div id="resume-skills">
                         <h4>Skills</h4>
-                        {resume.skill.map((d) => <Skill data={d} />)}
+                        {resume.skill.map((d, i) => <Skill data={d} key={i} />)}
                     </div>
                     <hr />
                     <div id="resume-languages">
                         <h4>Languages</h4>
-                        {resume.language.map((d) => <Skill data={d} />)}
+                        {resume.language.map((d, i) => <Skill data={d} key={i} />)}
                     </div>
                     <hr className="d-block d-lg-none" />
                 </div>
                 <div className="col-lg-8">
                     <div id="resume-experience">
                         <h4>Experience</h4>
-                        {resume.experience.map((d) => <Experience data={d} />)}
+                        {resume.experience.map((d, i) => <Experience data={d} key={i} />)}
                     </div>
                     <hr />
                     <div id="resume-education">
                         <h4>Education</h4>
-                        {resume.education.map((d) => <Education data={d} />)}
+                        {resume.education.map((d, i) => <Education data={d} key={i} />)}
                     </div>
                     <hr className="d-block d-lg-none" />
                 </div>
@@ -63,7 +63,7 @@ function Experience(props) {
         </div>
     }
     return (
-        <div className="row mb-3">
+        <div key={props.data.key} className="row mb-3">
             <div className="col-lg-2 d-none d-lg-block" style={{textAlign:"left"}}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
             <div className="col-lg-10" style={{textAlign:"justify"}}>
                 <div className="h5 mb-0">{`${props.data.title}`}</div>
@@ -89,7 +89,7 @@ function Education(props) {
         </div>
     }
     return (
-        <div className="row mb-3">
+        <div key={props.data.key} className="row mb-3">
             <div className="col-lg-2 d-none d-lg-block" style={{textAlign:"left"}}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
             <div className="col-lg-10" style={{textAlign:"justify"}}>
                 <div className="h5 mb-0">{`${props.data.title}`}</div>
@@ -114,10 +114,10 @@ function Skill(props) {
         var levelIcons = [];
         while (i < maxLevel) {
             if (i < level) {
-                levelIcons.push(<i className="fa-solid fa-circle fa-xs" />);
+                levelIcons.push(<i key={i} className="fa-solid fa-circle fa-xs" />);
             }
             else {
-                levelIcons.push(<i className="fa-regular fa-circle fa-xs" />);
+                levelIcons.push(<i key={i} className="fa-regular fa-circle fa-xs" />);
             }
             i++;
         }
@@ -126,7 +126,7 @@ function Skill(props) {
         </div>
     }
     return (
-        <div className="row justify-content-between">
+        <div key={props.data.key} className="row justify-content-between">
             <div className="col-auto">{props.data.name}</div>
             {level}
         </div>

@@ -12,7 +12,7 @@ class Projects extends React.Component {
                     <div className="display-5" align="center">Projects</div>
                     <hr />
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-                        {projects.map((d) => <Project data={d} />)}
+                        {projects.map((d, i) => <Project data={d} key={i} />)}
                     </div>
                 </div>
             </Container>
@@ -29,7 +29,7 @@ function Project(props) {
         image = <img src={props.data.imageLink} className="card-img-top" style={{width:"100%", height:"150px"}} />
     }
     return (
-        <div className="col mb-3">
+        <div key={props.data.key} className="col mb-3">
             <a href={props.data.link} className="card" width="100%">
                 {image}
                 <div className="card-body">

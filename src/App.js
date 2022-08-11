@@ -8,8 +8,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Row from 'react-bootstrap/Row';
 
-import About from './component/About';
-import Projects from './component/Projects';
+import About from './components/About';
+import Projects from './components/Projects';
 
 import DataUtil from "./user/DataUtil";
 

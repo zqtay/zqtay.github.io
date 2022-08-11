@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 
 // Bootstrap
@@ -55,9 +55,21 @@ class App extends React.Component {
   }
 }
 
+function useTitle(title) {
+  useEffect(() => {
+    return () => {
+      document.title = title;
+    };
+  })
+}
+
 function AppNavBar(props) {
   var variant = (props.variant === 'dark') ? 'dark' : 'light';
   var style = props.bg === 'transparent' ? { backgroundColor: "#00000000" } : {};
+  
+  // Set document title here
+  useTitle(DataUtil.getUser().documentTitle);
+
   return (
     <Navbar collapseOnSelect variant={variant} bg={props.bg} expand="md" stlye={style}>
       <Container>

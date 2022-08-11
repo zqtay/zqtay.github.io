@@ -2,7 +2,8 @@
     "user": {
         "firstName": "Zong Qing",
         "lastName": "Tay",
-        "title": "Software Engineer"
+        "title": "Software Engineer",
+        "documentTitle": "Document Title"
     },
     "home": {
         "headerTitle": "",

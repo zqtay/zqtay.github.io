@@ -10,7 +10,7 @@
         "contentText": ""
     },
     "resume": {
-        "opening": "Working experience in embedded software R&D. Proficient in both hardware design and software development. Detailed oriented, quick and eager learner with a can-do attitude",
+        "opening": "Working experience in embedded software R&D. Proficient in both hardware design and software development. Detailed oriented, quick and eager learner with a can-do attitude.",
         "experience": [
             {
                 "company": "Thales DIS",
@@ -20,10 +20,10 @@
                 "location": "Singapore",
                 "description": [
                     "Worked on embedded OS for embedded Secure Element (eSE) in new generation of mobile devices.",
-                    "Developed and validated features introduced in new Java Card specifications.",
+                    "Developed and validated features introduced in new Java Card specifications using Java and VB.NET.",
                     "Acted as Asset Manager to manage inventory tracking and labelling of card samples for security audit.",
                     "Familiar with smart card related specifications (ISO7816, GlobalPlatform).",
-                    "Experience in hardware debugging on ARM-based chip."
+                    "Experience in using development tools: Git, Jira, Jenkins."
                 ]
             },
             {
@@ -44,7 +44,7 @@
         "education": [
             {
                 "institute": "Nanyang Technological University",
-                "title": "Bachelor of Biongineering",
+                "title": "Bachelor of Bioengineering",
                 "dateStart": "Aug 2015",
                 "dateEnd": "Jul 2019",
                 "location": "Singapore",
@@ -112,31 +112,31 @@
             "title": "Blood Glucose Level App",
             "description": "Android app for manual recording of blood sugar, insulin dosage, and meals.",
             "link": "https://github.com/zqtay/bglevelapp",
-            "imageLink": ""
+            "imageLink": "/projects/bglevelapp.jpg"
         },
         {
             "title": "aes.c",
             "description": "C implementation of AES cipher, includes AES-XTS 128-bit and 256-bit modes.",
             "link": "https://github.com/zqtay/aes.c",
-            "imageLink": ""
+            "imageLink": "/projects/aes_c.jpg"
         },
         {
             "title": "Telegram Message Analyzer",
             "description": "Python script for analyzing message frequency and most used words from Telegram message history.",
             "link": "https://github.com/zqtay/Telegram-Message-Analyzer",
-            "imageLink": ""
+            "imageLink": "/projects/tgmsg.jpg"
         },
         {
             "title": "Request Throttler",
-            "description": "A service to throttle user request to backend server based on request rate. An interview techincal challenge from Cartrack.",
+            "description": "A service to throttle user request to backend server based on request rate. An interview technical challenge from Cartrack.",
             "link": "https://github.com/zqtay/cartrack-nodejs",
-            "imageLink": ""
+            "imageLink": "/projects/throttler.jpg"
         }
     ],
     "links": {
         "linkedin": "https://www.linkedin.com/in/zqtay/",
         "github": "https://github.com/zqtay",
         "email": "mailto:zqtay96@gmail.com",
-        "resume": ""
+        "resume": "https://drive.google.com/file/d/1irf43mDyT3jfM0fvOdW9eEZ7rnMxiXH9"
     }
 }

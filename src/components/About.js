@@ -11,7 +11,7 @@ class About extends React.Component {
         return (
             <div>
                 <Banner data={DataUtil.getHome()} image={BannerImage}/>
-                <Container style={{marginTop:"-120px"}}>
+                <Container style={{marginTop:"-25vh"}}>
                     <div id="content-panel" className="shadow p-3 p-lg-4 mb-5 bg-body rounded" style={{backgroundColor:"white"}}>
                         <DownloadButton link={DataUtil.getLinks().resume} />
                         <Header data={DataUtil.getUser()} image={ProfileImage} />
@@ -28,8 +28,8 @@ class About extends React.Component {
 function Banner(props) {
     return (
         <Container id="banner" fluid style={{backgroundImage: `url(${props.image})`, backgroundSize:"cover"}}>
-            <div className="row align-items-center" style={{height: "50vh", backgroundColor:"#00000000", marginTop:"-120px"}}>
-                <div className="col-10 mx-auto text-center" style={{color:"white"}}>
+            <div className="row align-items-center" style={{height: "50vh", backgroundColor:"#00000000"}}>
+                <div className="col-10 mx-auto text-center" style={{color:"white", marginTop:"-25vh"}}>
                     <div id="banner-title" className="display-5">{props.data.headerTitle}</div>
                     <p id="banner-subtitle" className="lead">{props.data.headerSubtitle}</p>
                 </div>

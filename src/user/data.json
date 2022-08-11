@@ -10,7 +10,7 @@
         "contentText": ""
     },
     "resume": {
-        "opening": "Working experience in embedded software R&D. Proficient in both hardware design and software development. Detailed oriented, quick and eager learner with a can-do attitude",
+        "opening": "Working experience in embedded software R&D. Proficient in both hardware design and software development. Detailed oriented, quick and eager learner with a can-do attitude.",
         "experience": [
             {
                 "company": "Thales DIS",
@@ -20,10 +20,10 @@
                 "location": "Singapore",
                 "description": [
                     "Worked on embedded OS for embedded Secure Element (eSE) in new generation of mobile devices.",
-                    "Developed and validated features introduced in new Java Card specifications.",
+                    "Developed and validated features introduced in new Java Card specifications using Java and VB.NET.",
                     "Acted as Asset Manager to manage inventory tracking and labelling of card samples for security audit.",
                     "Familiar with smart card related specifications (ISO7816, GlobalPlatform).",
-                    "Experience in hardware debugging on ARM-based chip."
+                    "Experience in using development tools: Git, Jira, Jenkins."
                 ]
             },
             {
@@ -44,7 +44,7 @@
         "education": [
             {
                 "institute": "Nanyang Technological University",
-                "title": "Bachelor of Biongineering",
+                "title": "Bachelor of Bioengineering",
                 "dateStart": "Aug 2015",
                 "dateEnd": "Jul 2019",
                 "location": "Singapore",
@@ -128,7 +128,7 @@
         },
         {
             "title": "Request Throttler",
-            "description": "A service to throttle user request to backend server based on request rate. An interview techincal challenge from Cartrack.",
+            "description": "A service to throttle user request to backend server based on request rate. An interview technical challenge from Cartrack.",
             "link": "https://github.com/zqtay/cartrack-nodejs",
             "imageLink": ""
         }
@@ -137,6 +137,6 @@
         "linkedin": "https://www.linkedin.com/in/zqtay/",
         "github": "https://github.com/zqtay",
         "email": "mailto:zqtay96@gmail.com",
-        "resume": ""
+        "resume": "https://drive.google.com/file/d/1irf43mDyT3jfM0fvOdW9eEZ7rnMxiXH9"
     }
 }

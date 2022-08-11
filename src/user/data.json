@@ -2,7 +2,8 @@
     "user": {
         "firstName": "First",
         "lastName": "Last",
-        "title": "Title"
+        "title": "Title",
+        "documentTitle": "Document Title"
     },
     "home": {
         "headerTitle": "Header title",

@@ -5,10 +5,7 @@ const Resume = (props) => {
     return (
         <div className="row text-start gx-lg-5">
             <div className="col-lg-4" style={{ textAlign: "justify" }}>
-                <div id="resume-about">
-                    <h4>About</h4>
-                    <Opening data={resume.opening} />
-                </div>
+                <Opening data={resume.opening} />
                 <div id="resume-skills">
                     <h4>Skills</h4>
                     {resume.skill.map((d, i) => <Skill data={d} key={i} />)}
@@ -41,10 +38,13 @@ const Opening = (props) => {
         return;
     }
     return (
-        <div>
-            {props.data}
+        <React.Fragment>
+            <div id="resume-about">
+                <h4>About</h4>
+                {props.data}
+            </div>
             <hr />
-        </div>
+        </React.Fragment>
     );
 }
 

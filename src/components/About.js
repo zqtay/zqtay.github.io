@@ -8,7 +8,7 @@ import DataUtil from "../user/DataUtil";
 
 const About = (props) => {
     return (
-        <div>
+        <React.Fragment>
             <Banner data={DataUtil.getHome()} image={BannerImage} />
             <Container style={{ marginTop: "-25vh" }}>
                 <div id="content-panel" className="shadow p-3 p-lg-4 mb-5 bg-body rounded" style={{ backgroundColor: "white" }}>
@@ -19,7 +19,7 @@ const About = (props) => {
                     <hr className="d-none d-lg-block" />
                 </div>
             </Container>
-        </div>
+        </React.Fragment>
     );
 }
 

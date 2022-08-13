@@ -1,44 +1,42 @@
 import React from 'react';
 
-class Resume extends React.Component {
-    render() {
-        var resume = this.props.data;
-        return (
-            <div className="row text-start gx-lg-5">
-                <div className="col-lg-4" style={{textAlign:"justify"}}>
-                    <div id="resume-about">
-                        <h4>About</h4>
-                        <Opening data={resume.opening} />
-                    </div>
-                    <div id="resume-skills">
-                        <h4>Skills</h4>
-                        {resume.skill.map((d, i) => <Skill data={d} key={i} />)}
-                    </div>
-                    <hr />
-                    <div id="resume-languages">
-                        <h4>Languages</h4>
-                        {resume.language.map((d, i) => <Skill data={d} key={i} />)}
-                    </div>
-                    <hr className="d-block d-lg-none" />
+const Resume = (props) => {
+    var resume = props.data;
+    return (
+        <div className="row text-start gx-lg-5">
+            <div className="col-lg-4" style={{ textAlign: "justify" }}>
+                <div id="resume-about">
+                    <h4>About</h4>
+                    <Opening data={resume.opening} />
                 </div>
-                <div className="col-lg-8">
-                    <div id="resume-experience">
-                        <h4>Experience</h4>
-                        {resume.experience.map((d, i) => <Experience data={d} key={i} />)}
-                    </div>
-                    <hr />
-                    <div id="resume-education">
-                        <h4>Education</h4>
-                        {resume.education.map((d, i) => <Education data={d} key={i} />)}
-                    </div>
-                    <hr className="d-block d-lg-none" />
+                <div id="resume-skills">
+                    <h4>Skills</h4>
+                    {resume.skill.map((d, i) => <Skill data={d} key={i} />)}
                 </div>
+                <hr />
+                <div id="resume-languages">
+                    <h4>Languages</h4>
+                    {resume.language.map((d, i) => <Skill data={d} key={i} />)}
+                </div>
+                <hr className="d-block d-lg-none" />
             </div>
-        );
-    }
+            <div className="col-lg-8">
+                <div id="resume-experience">
+                    <h4>Experience</h4>
+                    {resume.experience.map((d, i) => <Experience data={d} key={i} />)}
+                </div>
+                <hr />
+                <div id="resume-education">
+                    <h4>Education</h4>
+                    {resume.education.map((d, i) => <Education data={d} key={i} />)}
+                </div>
+                <hr className="d-block d-lg-none" />
+            </div>
+        </div>
+    );
 }
 
-function Opening(props) {
+const Opening = (props) => {
     if (props.data === null || props.data === "") {
         return;
     }
@@ -50,7 +48,7 @@ function Opening(props) {
     );
 }
 
-function Experience(props) {
+const Experience = (props) => {
     var desc = null
     if (Array.isArray(props.data.description)) {
         desc = <ul>
@@ -64,8 +62,8 @@ function Experience(props) {
     }
     return (
         <div key={props.data.key} className="row mb-3">
-            <div className="col-lg-2 d-none d-lg-block" style={{textAlign:"left"}}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
-            <div className="col-lg-10" style={{textAlign:"justify"}}>
+            <div className="col-lg-2 d-none d-lg-block" style={{ textAlign: "left" }}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+            <div className="col-lg-10" style={{ textAlign: "justify" }}>
                 <div className="h5 mb-0">{`${props.data.title}`}</div>
                 <div className="fs-6">{`${props.data.company}, ${props.data.location}`}</div>
                 <div className="d-lg-none fw-light">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
@@ -76,7 +74,7 @@ function Experience(props) {
     );
 }
 
-function Education(props) {
+const Education = (props) => {
     var desc = null
     if (Array.isArray(props.data.description)) {
         desc = <ul>
@@ -90,8 +88,8 @@ function Education(props) {
     }
     return (
         <div key={props.data.key} className="row mb-3">
-            <div className="col-lg-2 d-none d-lg-block" style={{textAlign:"left"}}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
-            <div className="col-lg-10" style={{textAlign:"justify"}}>
+            <div className="col-lg-2 d-none d-lg-block" style={{ textAlign: "left" }}>{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+            <div className="col-lg-10" style={{ textAlign: "justify" }}>
                 <div className="h5 mb-0">{`${props.data.title}`}</div>
                 <div className="fs-6">{`${props.data.institute}, ${props.data.location}`}</div>
                 <div className="d-lg-none fw-light">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
@@ -102,7 +100,7 @@ function Education(props) {
     );
 }
 
-function Skill(props) {
+const Skill = (props) => {
     var level = null;
     const maxLevel = 5;
     if (props.data.level === null || props.data.level === "") {

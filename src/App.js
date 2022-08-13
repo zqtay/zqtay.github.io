@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 // Bootstrap
@@ -13,14 +13,10 @@ import Projects from './components/Projects';
 
 import DataUtil from "./user/DataUtil";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { currentBody: <About /> };
-    this.setCurrentBody = this.setCurrentBody.bind(this)
-  }
+const App = (props) => {
+  const [currentBody, setCurrentBody] = useState(<About />);
 
-  setCurrentBody(selectedKey) {
+  const setCurrentBodyHandler = (selectedKey) => {
     var body = <About />;
     switch (selectedKey) {
       case "About":
@@ -32,43 +28,30 @@ class App extends React.Component {
       default:
         break;
     }
-    this.setState(
-      {
-        currentBody: body
-      }
-    );
+    setCurrentBody(body);
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
 
-  render() {
-    return (
-      <div className="App">
-        <header className='sticky-top shadow'>
-          <AppNavBar variant='dark' bg='dark' handleClick={this.setCurrentBody} />
-        </header>
-        <AppBody currentBody={this.state.currentBody} />
-        <footer>
-          <AppFooter />
-        </footer>
-      </div>
-    );
-  }
-}
-
-function useTitle(title) {
   useEffect(() => {
-    return () => {
-      document.title = title;
-    };
-  })
+    document.title = DataUtil.getUser().documentTitle;
+  }, []);
+
+  return (
+    <div className="App">
+      <header className='sticky-top shadow'>
+        <AppNavBar variant='dark' bg='dark' handleClick={setCurrentBodyHandler} />
+      </header>
+      <AppBody currentBody={currentBody} />
+      <footer>
+        <AppFooter />
+      </footer>
+    </div>
+  );
 }
 
-function AppNavBar(props) {
+const AppNavBar = (props) => {
   var variant = (props.variant === 'dark') ? 'dark' : 'light';
   var style = props.bg === 'transparent' ? { backgroundColor: "#00000000" } : {};
-  
-  // Set document title here
-  useTitle(DataUtil.getUser().documentTitle);
 
   return (
     <Navbar collapseOnSelect variant={variant} bg={props.bg} expand="md" stlye={style}>
@@ -86,13 +69,13 @@ function AppNavBar(props) {
   );
 }
 
-function AppBody(props) {
+const AppBody = (props) => {
   return (
     props.currentBody
   );
 }
 
-function AppFooter(props) {
+const AppFooter = (props) => {
   var links = DataUtil.getLinks();
   var user = DataUtil.getUser();
   return (

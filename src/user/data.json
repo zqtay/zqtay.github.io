@@ -110,6 +110,12 @@
     },
     "projects": [
         {
+            "title": "Relay",
+            "description": "A word-linking game developed in React.js and Bootstrap.",
+            "link": "https://github.com/zqtay/relay",
+            "imageLink": "/projects/relay.jpg"
+        },
+        {
             "title": "Blood Glucose Level App",
             "description": "Android app for manual recording of blood sugar, insulin dosage, and meals.",
             "link": "https://github.com/zqtay/bglevelapp",

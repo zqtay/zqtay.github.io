@@ -24,7 +24,7 @@ const Project = (props) => {
         image = <PlaceholderImage width="100%" height="150px" />
     }
     else {
-        image = <img src={props.data.imageLink} className="card-img-top" style={{ width: "100%", height: "150px" }} />
+        image = <img src={props.data.imageLink} className="card-img-top" style={{ width: "100%", height: "150px", objectFit: "cover" }} />
     }
     return (
         <div key={props.data.key} className="col mb-3">

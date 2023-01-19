@@ -11,7 +11,7 @@
         "contentText": ""
     },
     "resume": {
-        "opening": "Working experience in embedded software R&D. Proficient in both hardware design and software development. Detailed oriented, quick and eager learner with a can-do attitude.",
+        "opening": "I am an embedded software engineer by day, web development hobbyist by night. Solving technical problems brings me joy. Constantly in search of knowledge and I learn best on the job.",
         "experience": [
             {
                 "company": "Thales DIS",
@@ -20,11 +20,12 @@
                 "dateEnd": "Present",
                 "location": "Singapore",
                 "description": [
-                    "Worked on embedded OS for embedded Secure Element (eSE) in new generation of mobile devices.",
-                    "Developed and validated features introduced in new Java Card specifications using Java and VB.NET.",
-                    "Acted as Asset Manager to manage inventory tracking and labelling of card samples for security audit.",
-                    "Familiar with smart card related specifications (ISO7816, GlobalPlatform).",
-                    "Experience in using development tools: Git, Jira, Jenkins."
+                    "Worked on embedded OS for embedded Secure Element (eSE) with smart card technology e.g. Javacard, GlobalPlatform (GP), etc.",
+                    "Improved ELF upgrade feature (GP Amendment H) for wider functionality and better edge case handling.",
+                    "In charge of implementing eUICC CAT3 in enabling contactless registry management (GP Amendment C) on eSIM profiles.",
+                    "Responsible for defining and writing unit and systematic tests for new features for better robustness",
+                    "Acted as Asset Manager to manage inventory for chips and card samples and complied to security audit.",
+                    "Skilled in using development tools: Git, Jira, Jenkins."
                 ]
             },
             {
@@ -61,15 +62,15 @@
                 "level": "4"
             },
             {
+                "name": "React",
+                "level": "4"
+            },
+            {
                 "name": "Java",
                 "level": "3"
             },
             {
                 "name": "NodeJS",
-                "level": "3"
-            },
-            {
-                "name": "React",
                 "level": "3"
             },
             {
@@ -110,9 +111,15 @@
     },
     "projects": [
         {
+            "title": "Little Lemon",
+            "description": "A front-end capstone project using React.js.",
+            "link": "https://zqtay.github.io/little-lemon",
+            "imageLink": "/projects/little-lemon.jpg"
+        },
+        {
             "title": "Relay",
             "description": "A word-linking game developed in React.js and Bootstrap.",
-            "link": "https://github.com/zqtay/relay",
+            "link": "https://zqtay.github.io/relay",
             "imageLink": "/projects/relay.jpg"
         },
         {

@@ -23,7 +23,7 @@
                     "Worked on embedded OS for embedded Secure Element (eSE) with smart card technology e.g. Javacard, GlobalPlatform (GP), etc.",
                     "Improved ELF upgrade feature (GP Amendment H) for wider functionality and better edge case handling.",
                     "In charge of implementing eUICC CAT3 in enabling contactless registry management (GP Amendment C) on eSIM profiles.",
-                    "Responsible for defining and writing unit and systematic tests for new features for better robustness",
+                    "Responsible for defining and writing unit and systematic tests for new Javacard 3.1 features for better robustness.",
                     "Acted as Asset Manager to manage inventory for chips and card samples and complied to security audit.",
                     "Skilled in using development tools: Git, Jira, Jenkins."
                 ]
@@ -151,6 +151,6 @@
         "linkedin": "https://www.linkedin.com/in/zqtay/",
         "github": "https://github.com/zqtay",
         "email": "mailto:zqtay96@gmail.com",
-        "resume": "https://drive.google.com/file/d/1irf43mDyT3jfM0fvOdW9eEZ7rnMxiXH9"
+        "resume": "https://drive.google.com/file/d/158HzBHrEP1PNONTYppuKBesTRDMe1Xka"
     }
 }

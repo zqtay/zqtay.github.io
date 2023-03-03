@@ -1,0 +1,35 @@
+.content-panel {
+  background-color: white;
+}
+
+.banner-container {
+  background-image: url("../../user/banner.jpg");
+  background-size: cover;
+}
+
+.banner {
+  height: 50vh;
+  background-color: transparent;
+}
+
+.banner-text-container {
+  color: white;
+  margin-top: -25vh;
+}
+
+.user-image-container {
+  width: 45%;
+  min-width: 120px;
+  max-width: 180px;
+}
+
+.user-image {
+  padding-top: 100%;
+  max-width: 100%;
+  background-image: url("../../user/profile.jpg");
+  background-size: contain;
+}
+
+.user-name {
+  font-weight: 400;
+}

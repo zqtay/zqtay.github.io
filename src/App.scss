@@ -1,0 +1,19 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+@mixin transition-default($prop) {
+  transition: $prop 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+a {
+  color:black;
+  @include transition-default(color);
+}
+
+a:focus, a:hover{
+  color:lightskyblue;
+}
+

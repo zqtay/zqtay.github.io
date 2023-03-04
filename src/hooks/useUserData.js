@@ -13,6 +13,9 @@ class DataUtil {
   static getProjects() {
     return data.projects;
   }
+  static getCerts() {
+    return data.certifications;
+  }
   static getLinks() {
     return data.links;
   }

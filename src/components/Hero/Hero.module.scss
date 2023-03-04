@@ -1,10 +1,11 @@
 .hero-container {
-  background-image: url("../../user/banner.jpg");
+  background-image: linear-gradient(to bottom, #FFFFFF00 85%, #FFFFFFFF),
+  url("../../user/banner.jpg");
   background-size: cover;
 }
 
 .hero {
-  height: 50vh;
+  height: 60vh;
   background-color: transparent;
 }
 

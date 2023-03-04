@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Resume = (props) => {
   const resume = props.data;
   return (
@@ -38,13 +36,13 @@ const Opening = (props) => {
     return;
   }
   return (
-    <React.Fragment>
+    <>
       <div id="resume-about">
         <h4>About</h4>
         {props.data}
       </div>
       <hr />
-    </React.Fragment>
+    </>
   );
 };
 

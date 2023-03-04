@@ -1,20 +1,12 @@
-.content-panel {
-  background-color: white;
-}
-
-.banner-container {
-  background-image: url("../../user/banner.jpg");
-  background-size: cover;
-}
-
-.banner {
-  height: 50vh;
-  background-color: transparent;
-}
-
-.banner-text-container {
-  color: white;
+.about-container {
+  padding-top: 1vh;
   margin-top: -25vh;
+}
+
+.about {
+  background-color: white;
+  outline: 1px solid black;
+  box-shadow: 5px 5px 0px 2px #00000020;
 }
 
 .user-image-container {

@@ -1,39 +1,18 @@
-import Container from 'react-bootstrap/Container';
-
 import IconButton from "../UI/IconButton/IconButton";
+import SectionContainer from "../UI/SectionContainer/SectionContainer";
 import Resume from "./Resume";
-import useUserData from "../../hooks/useUserData";
 
 import styles from "./About.module.scss";
 
 const About = (props) => {
-  const data = useUserData();
   return (
-    <>
-      <Banner data={data.getHome()} />
-      <Container style={{ marginTop: "-25vh" }}>
-        <div id="content-panel" className={`shadow p-3 p-lg-4 mb-5 bg-body rounded ${styles["content-panel"]}`}>
-          <DownloadButton link={data.getLinks().resume} />
-          <ProfileHeader data={data.getUser()} />
-          <hr />
-          <Resume data={data.getResume()} />
-          <hr className="d-none d-lg-block" />
-        </div>
-      </Container>
-    </>
-  );
-};
-
-const Banner = (props) => {
-  return (
-    <Container id="banner" fluid className={styles["banner-container"]}>
-      <div className={`row align-items-center ${styles["banner"]}`}>
-        <div className={`col-10 mx-auto text-center ${styles["banner-text-container"]}`} >
-          <div id="banner-title" className="display-5">{props.data.headerTitle}</div>
-          <p id="banner-subtitle" className="lead">{props.data.headerSubtitle}</p>
-        </div>
-      </div>
-    </Container>
+    <SectionContainer id="about" className={styles["about-container"]}>
+      <DownloadButton link={props.data.getLinks().resume} />
+      <ProfileHeader data={props.data.getUser()} />
+      <hr />
+      <Resume data={props.data.getResume()} />
+      <hr className="d-none d-lg-block" />
+    </SectionContainer>
   );
 };
 

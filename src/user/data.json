@@ -20,9 +20,9 @@
         "dateEnd": "Present",
         "location": "Singapore",
         "description": [
-          "Worked on embedded OS for embedded Secure Element (eSE) with smart card technology e.g. Javacard, GlobalPlatform (GP), etc.",
-          "Improved ELF upgrade feature (GP Amendment H) for wider functionality and better edge case handling.",
-          "In charge of implementing eUICC CAT3 in enabling contactless registry management (GP Amendment C) on eSIM profiles.",
+          "Experience in embedded OS development for eSE & eSIM product with smart card technology. e.g. Javacard, GlobalPlatform (GP), etc.",
+          "Improved applet package upgrade feature (GP Amendment H) that is critical for card content management.",
+          "Implemented NFC eUICC feature in enabling contactless applet management (GP Amendment C) on eSIM profiles.",
           "Responsible for defining and writing unit and systematic tests for new Javacard 3.1 features for better robustness.",
           "Acted as Asset Manager to manage inventory for chips and card samples and complied to security audit.",
           "Skilled in using development tools: Git, Jira, Jenkins."
@@ -149,11 +149,25 @@
   ],
   "certifications": [
     {
-      "title": "Cert",
-      "issuer": "Issuer",
-      "dateAttained": "XXX XXXX",
-      "description": "Description",
-      "link": "/"
+      "title": "Meta Front-End Developer Specialization",
+      "issuer": "Coursera (Meta)",
+      "dateAttained": "Jan 2023",
+      "description": "HTML, CSS, Javascript, React",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/EXVMFNNY9ENK"
+    },
+    {
+      "title": "Scrum Master Specialization",
+      "issuer": "Coursera (LearnQuest)",
+      "dateAttained": "Nov 2022",
+      "description": "Scrum, Agile Methodologies",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/VXN3PDCKX38F"
+    },
+    {
+      "title": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+      "issuer": "Udemy",
+      "dateAttained": "Aug 2022",
+      "description": "Javascript, React",
+      "link": "https://www.udemy.com/certificate/UC-0871346a-d57c-4002-90af-086dcd809f94/"
     }
   ],
   "links": {

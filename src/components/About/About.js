@@ -11,7 +11,6 @@ const About = (props) => {
       <ProfileHeader data={props.data.getUser()} />
       <hr />
       <Resume data={props.data.getResume()} />
-      <hr className="d-none d-lg-block" />
     </SectionContainer>
   );
 };
@@ -36,7 +35,7 @@ const DownloadButton = (props) => {
     return null;
   }
   return (
-    <div className="d-flex flex-column align-items-end w-100">
+    <div className={styles["download-button"]}>
       <IconButton href={props.link} size="xl" icon="fa-solid fa-file-arrow-down" />
     </div>
   );

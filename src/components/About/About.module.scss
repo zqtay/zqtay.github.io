@@ -1,12 +1,13 @@
 .about-container {
-  padding-top: 1vh;
   margin-top: -35vh;
+  margin-bottom: 30px;
+  position: relative;
 }
 
-.about {
-  background-color: white;
-  outline: 1px solid black;
-  box-shadow: 5px 5px 0px 2px #00000020;
+.download-button {
+  position: absolute;
+  top: 15px;
+  right: 22px;
 }
 
 .user-image-container {

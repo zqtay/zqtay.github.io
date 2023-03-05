@@ -1,10 +1,12 @@
 import React from 'react';
 import SectionContainer from "../UI/SectionContainer/SectionContainer";
 
+import styles from "./Certs.module.scss";
+
 const Certs = (props) => {
   const certs = props.data;
   return (
-    <SectionContainer id="projects">
+    <SectionContainer id="certs" className={styles["certs-container"]}>
       <div className="display-5" align="center">Certifications</div>
       <hr />
       {certs.map((d, i) => <Cert data={d} key={i} />)}

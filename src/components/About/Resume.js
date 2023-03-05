@@ -25,7 +25,6 @@ const Resume = (props) => {
           <h4>Education</h4>
           {resume.education.map((d, i) => <Education data={d} key={i} />)}
         </div>
-        <hr className="d-block d-lg-none" />
       </div>
     </div>
   );

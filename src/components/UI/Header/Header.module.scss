@@ -1,3 +1,6 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   box-shadow: 0 2px 0px 2px #00000020;
 }

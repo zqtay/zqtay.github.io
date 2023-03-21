@@ -58,11 +58,11 @@
     ],
     "skill": [
       {
-        "name": "C",
+        "name": "React.js",
         "level": "4"
       },
       {
-        "name": "React",
+        "name": "C",
         "level": "4"
       },
       {
@@ -70,7 +70,11 @@
         "level": "3"
       },
       {
-        "name": "NodeJS",
+        "name": "Typescript",
+        "level": "3"
+      },
+      {
+        "name": "Node.js",
         "level": "3"
       },
       {
@@ -110,6 +114,12 @@
     ]
   },
   "projects": [
+    {
+      "title": "MsgStats",
+      "description": "Process message history into visualised data. Developed in React.js and Typescript.",
+      "link": "https://zqtay.github.io/msgstats",
+      "imageLink": "/projects/msgstats.jpg"
+    },
     {
       "title": "Little Lemon",
       "description": "A front-end capstone project using React.js.",
@@ -174,6 +184,6 @@
     "linkedin": "https://www.linkedin.com/in/zqtay/",
     "github": "https://github.com/zqtay",
     "email": "mailto:zqtay96@gmail.com",
-    "resume": "https://drive.google.com/file/d/158HzBHrEP1PNONTYppuKBesTRDMe1Xka"
+    "resume": "https://drive.google.com/file/d/1BQbFRfWsoU932akrmMxPQ9ddYTx4xBGZ"
   }
 }

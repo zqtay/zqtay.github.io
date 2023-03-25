@@ -16,6 +16,11 @@ const About = (props) => {
 };
 
 const ProfileHeader = (props) => {
+  const nameFormat = props.data.nameFormat ? props.data.nameFormat : "firstName lastName";
+  const formattedName = nameFormat
+    .replace("firstName", props.data.firstName)
+    .replace("lastName", props.data.lastName);
+
   return (
     <div className="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center">
       <div id="image-profile" className={`col-lg px-0 rounded-circle border border-4 border-white shadow-sm ${styles["user-image-container"]}`} >
@@ -23,7 +28,7 @@ const ProfileHeader = (props) => {
         </div>
       </div>
       <div className="col col-lg-auto ms-lg-4 text-center">
-        <div id="user-name" className={`display-5 text-lg-start ${styles["user-name"]}`}>{`${props.data.lastName}, ${props.data.firstName}`}</div>
+        <div id="user-name" className={`display-5 text-lg-start ${styles["user-name"]}`}>{formattedName}</div>
         <div id="user-title" className="display fs-2 fw-light text-lg-start">{props.data.title}</div>
       </div>
     </div>

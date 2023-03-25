@@ -160,18 +160,25 @@
   ],
   "certifications": [
     {
-      "title": "Meta Front-End Developer Specialization",
+      "title": "IBM Back-End Development Professional Certificate",
+      "issuer": "Coursera (IBM)",
+      "dateAttained": "Mar 2023",
+      "description": "API, SQL, Python, Cloud, Docker",
+      "link": "https://www.coursera.org/account/accomplishments/certificate/KGWLUHFAVEDN"
+    },
+    {
+      "title": "Meta Front-End Developer Professional Certificate",
       "issuer": "Coursera (Meta)",
       "dateAttained": "Jan 2023",
       "description": "HTML, CSS, Javascript, React",
-      "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/EXVMFNNY9ENK"
+      "link": "https://www.coursera.org/account/accomplishments/certificate/EXVMFNNY9ENK"
     },
     {
       "title": "Scrum Master Specialization",
       "issuer": "Coursera (LearnQuest)",
       "dateAttained": "Nov 2022",
       "description": "Scrum, Agile Methodologies",
-      "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/VXN3PDCKX38F"
+      "link": "https://www.coursera.org/account/accomplishments/certificate/VXN3PDCKX38F"
     },
     {
       "title": "React - The Complete Guide (incl Hooks, React Router, Redux)",

@@ -8,7 +8,7 @@ const Header = ({variant, bg}) => {
   variant = (variant === 'dark') ? 'dark' : 'light';
 
   return (
-    <header className={`${styles["header"]}`}>
+    <header className={`sticky-top ${styles["header"]}`}>
       <Navbar collapseOnSelect variant={variant} bg={bg} expand="md">
         <Container>
           <Navbar.Brand href="#">My Portfolio</Navbar.Brand>

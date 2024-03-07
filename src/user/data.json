@@ -2,7 +2,6 @@
   "user": {
     "firstName": "First",
     "lastName": "Last",
-    "nameFormat": "lastName firstName",
     "title": "Title",
     "documentTitle": "Document Title"
   },

@@ -1,69 +1,75 @@
-const Resume = (props) => {
-  const resume = props.data;
+import styles from "./About.module.scss";
+
+const Resume = ({ data }) => {
+  const resume = data;
   return (
     <div className="row text-start gx-lg-5">
-      <div className="col-lg-4 text-justify">
+      <div className="text-center">
         <Opening data={resume.opening} />
-        <div id="resume-skills">
+      </div>
+      <div className="col-lg-4 text-justify order-2 order-lg-1">
+        <div id="skills">
           <h4>Skills</h4>
           {resume.skill.map((d, i) => <Skill data={d} key={i} />)}
         </div>
         <hr />
-        <div id="resume-languages">
+        <div id="languages">
           <h4>Languages</h4>
           {resume.language.map((d, i) => <Skill data={d} key={i} />)}
         </div>
         <hr className="d-block d-lg-none" />
       </div>
-      <div className="col-lg-8">
-        <div id="resume-experience">
+      <div className="col-lg-8 order-1 order-lg-2">
+        <div id="experience">
           <h4>Experience</h4>
           {resume.experience.map((d, i) => <Experience data={d} key={i} />)}
         </div>
         <hr />
-        <div id="resume-education">
+        <div id="education">
           <h4>Education</h4>
           {resume.education.map((d, i) => <Education data={d} key={i} />)}
         </div>
+        <hr className="d-block d-lg-none" />
       </div>
     </div>
   );
 };
 
-const Opening = (props) => {
-  if (props.data === null || props.data === "") {
+const Opening = ({ data }) => {
+  if (data === null || data === "") {
     return;
   }
   return (
     <>
-      <div id="resume-about">
-        <h4>About</h4>
-        {props.data}
+      <div className={styles["opening"]}>
+        {data}
       </div>
       <hr />
     </>
   );
 };
 
-const Experience = (props) => {
+const Experience = ({ data }) => {
   var desc = null;
-  if (Array.isArray(props.data.description)) {
+  if (Array.isArray(data.description)) {
     desc = <ul>
-      {props.data.description.map((d, i) => <li key={i}>{d}</li>)}
+      {data.description.map((d, i) => <li key={i}>{d}</li>)}
     </ul>;
   }
   else {
     desc = <div>
-      {props.data.description}
+      {data.description}
     </div>;
   }
   return (
-    <div key={props.data.key} className="row mb-3">
-      <div className="col-lg-2 d-none d-lg-block text-left">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
-      <div className="col-lg-10 text-justify">
-        <div className="h5 mb-0">{`${props.data.title}`}</div>
-        <div className="fs-6">{`${props.data.company}, ${props.data.location}`}</div>
-        <div className="d-lg-none fw-light">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+    <div key={data.key} className="row mb-3">
+      <div className="col-lg-2 d-none d-lg-block text-left white-space-pre-line">
+        {`${data.dateStart} -\n${data.dateEnd}`}
+      </div>
+      <div className="col-lg-10">
+        <div className="h5 mb-1">{`${data.title}`}</div>
+        <div className="mb-1 mb-lg-2 fs-6">{`${data.company}, ${data.location}`}</div>
+        <div className="mb-2 d-lg-none fw-light">{`${data.dateStart} - ${data.dateEnd}`}</div>
         <div className="mb-1" />
         {desc}
       </div>
@@ -71,25 +77,27 @@ const Experience = (props) => {
   );
 };
 
-const Education = (props) => {
+const Education = ({ data }) => {
   var desc = null;
-  if (Array.isArray(props.data.description)) {
+  if (Array.isArray(data.description)) {
     desc = <ul>
-      {props.data.description.map((d, i) => <li key={i}>{d}</li>)}
+      {data.description.map((d, i) => <li key={i}>{d}</li>)}
     </ul>;
   }
   else {
     desc = <div>
-      {props.data.description}
+      {data.description}
     </div>;
   }
   return (
-    <div key={props.data.key} className="row mb-3">
-      <div className="col-lg-2 d-none d-lg-block text-left">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+    <div key={data.key} className="row mb-3">
+      <div className="col-lg-2 d-none d-lg-block text-left white-space-pre-line">
+        {`${data.dateStart} -\n${data.dateEnd}`}
+      </div>
       <div className="col-lg-10 text-justify">
-        <div className="h5 mb-0">{`${props.data.title}`}</div>
-        <div className="fs-6">{`${props.data.institute}, ${props.data.location}`}</div>
-        <div className="d-lg-none fw-light">{`${props.data.dateStart} - ${props.data.dateEnd}`}</div>
+        <div className="h5 mb-1">{`${data.title}`}</div>
+        <div className="mb-1 mb-lg-2 fs-6">{`${data.institute}, ${data.location}`}</div>
+        <div className="mb-2 d-lg-none fw-light">{`${data.dateStart} - ${data.dateEnd}`}</div>
         <div className="mb-1" />
         {desc}
       </div>
@@ -97,14 +105,14 @@ const Education = (props) => {
   );
 };
 
-const Skill = (props) => {
+const Skill = ({ data }) => {
   var level = null;
   const maxLevel = 5;
-  if (props.data.level === null || props.data.level === "") {
+  if (data.level === null || data.level === "") {
     level = null;
   }
   else {
-    level = parseInt(props.data.level);
+    level = parseInt(data.level);
     var i = 0;
     var levelIcons = [];
     while (i < maxLevel) {
@@ -121,8 +129,8 @@ const Skill = (props) => {
     </div>;
   }
   return (
-    <div key={props.data.key} className="row justify-content-between">
-      <div className="col-auto">{props.data.name}</div>
+    <div key={data.key} className="row justify-content-between">
+      <div className="col-auto">{data.name}</div>
       {level}
     </div>
   );

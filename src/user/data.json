@@ -21,11 +21,11 @@
         "dateEnd": "Present",
         "location": "Singapore",
         "description": [
-          "Developed a culinary recipe repository website for storing and serving thousands of recipes with media content using Next.js and Typescript.",
-          "Developed and maintained various RPA solutions using low-code platform such as Power Apps and Power Automate which contribute to company's digitalization initiatives.",
-          "Proficient in cloud technologies such as Microsoft Azure, including deploying applications, managing resources, and utilizing serverless computing.",
-          "Experience in utilizing third-parties APIs such as Microsoft Graph and Azure Blob with seamless system integration.",
-          "Participated in software development lifecycle with agile methodologies and delivered results in a timely manner."
+          "Developed a real-time flight operation dashboard that empowers ground operation monitoring and decision making.",
+          "Developed a culinary recipe repository app that enables knowledge retention and transfer for chefs.",
+          "Proficient in designing and implementing cloud-native solutions using Azure, focusing on serverless computing for scalability and reliability.",
+          "Conducted code reviews, provided technical guidance, and mentored junior developers to promote best practices and maintain code quality.",
+          "Participated in Agile development processes, including sprint planning, daily stand-ups, and retrospectives."
         ]
       },
       {
@@ -35,7 +35,7 @@
         "dateEnd": "Jul 2023",
         "location": "Singapore",
         "description": [
-          "Experience in embedded OS development for eSE & eSIM product with smart card technology. e.g. Javacard, GlobalPlatform (GP), etc.",
+          "Experienced in embedded OS development for eSE & eSIM product with smart card technology. e.g. Javacard, GlobalPlatform (GP), etc.",
           "Improved applet package upgrade feature (GP Amendment H) that is critical for card content management.",
           "Implemented NFC eUICC feature in enabling contactless applet management (GP Amendment C) on eSIM profiles.",
           "Responsible for defining and writing unit and systematic tests for new Javacard 3.1 features for better robustness.",
@@ -73,6 +73,10 @@
     ],
     "skill": [
       {
+        "name": "Next.js",
+        "level": "5"
+      },
+      {
         "name": "React.js",
         "level": "4"
       },
@@ -81,11 +85,11 @@
         "level": "4"
       },
       {
-        "name": "Node.js",
+        "name": "Azure",
         "level": "3"
       },
       {
-        "name": "Azure",
+        "name": "Node.js",
         "level": "3"
       },
       {
@@ -129,6 +133,12 @@
     ]
   },
   "projects": [
+    {
+      "title": "ExamTopics Scraper",
+      "description": "An app to scrape and run ExamTopics questions. Using Next.js and Vercel.",
+      "link": "https://github.com/zqtay/examtopics-scraper",
+      "imageLink": "/projects/examtopics-scraper.jpg"
+    },
     {
       "title": "MsgStats",
       "description": "Process message history into visualised data. Developed in React.js and Typescript.",

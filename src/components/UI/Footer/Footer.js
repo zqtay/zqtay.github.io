@@ -22,7 +22,7 @@ const Footer = (props) => {
             <IconButton href={links.email} size="lg" icon="fa-solid fa-envelope" />
           </Col>
         </Row>
-        <p className="copyright text-muted text-center">{`Copyright © ${user.firstName} ${user.lastName} 2023`}</p>
+        <p className="copyright text-muted text-center">{`Copyright © ${user.lastName} ${user.firstName} 2024`}</p>
       </Container>
     </footer>
   );

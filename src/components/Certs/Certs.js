@@ -4,7 +4,7 @@ import SectionContainer from "../UI/SectionContainer/SectionContainer";
 const Certs = (props) => {
   const certs = props.data;
   return (
-    <SectionContainer id="projects">
+    <SectionContainer id="certs">
       <div className="display-5" align="center">Certifications</div>
       <hr />
       {certs.map((d, i) => <Cert data={d} key={i} />)}

@@ -5,6 +5,7 @@
   text-decoration: none;
   background-color: white;
   color: black;
+  height: 100%;
   @include transition-default(all);
 
   &:focus, &:hover {
@@ -39,5 +40,5 @@
 }
 
 .card-text {
-  text-align: justify;
+  text-align: left;
 }

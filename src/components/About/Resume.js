@@ -1,3 +1,5 @@
+import styles from "./About.module.scss";
+
 const Resume = ({ data }) => {
   const resume = data;
   return (
@@ -39,7 +41,7 @@ const Opening = ({ data }) => {
   }
   return (
     <>
-      <div id="about">
+      <div className={styles["opening"]}>
         {data}
       </div>
       <hr />
@@ -61,11 +63,13 @@ const Experience = ({ data }) => {
   }
   return (
     <div key={data.key} className="row mb-3">
-      <div className="col-lg-2 d-none d-lg-block text-left">{`${data.dateStart} - ${data.dateEnd}`}</div>
-      <div className="col-lg-10 text-justify">
-        <div className="h5 mb-0">{`${data.title}`}</div>
-        <div className="fs-6">{`${data.company}, ${data.location}`}</div>
-        <div className="d-lg-none fw-light">{`${data.dateStart} - ${data.dateEnd}`}</div>
+      <div className="col-lg-2 d-none d-lg-block text-left white-space-pre-line">
+        {`${data.dateStart} -\n${data.dateEnd}`}
+      </div>
+      <div className="col-lg-10">
+        <div className="h5 mb-1">{`${data.title}`}</div>
+        <div className="mb-1 mb-lg-2 fs-6">{`${data.company}, ${data.location}`}</div>
+        <div className="mb-2 d-lg-none fw-light">{`${data.dateStart} - ${data.dateEnd}`}</div>
         <div className="mb-1" />
         {desc}
       </div>
@@ -87,11 +91,13 @@ const Education = ({ data }) => {
   }
   return (
     <div key={data.key} className="row mb-3">
-      <div className="col-lg-2 d-none d-lg-block text-left">{`${data.dateStart} - ${data.dateEnd}`}</div>
+      <div className="col-lg-2 d-none d-lg-block text-left white-space-pre-line">
+        {`${data.dateStart} -\n${data.dateEnd}`}
+      </div>
       <div className="col-lg-10 text-justify">
-        <div className="h5 mb-0">{`${data.title}`}</div>
-        <div className="fs-6">{`${data.institute}, ${data.location}`}</div>
-        <div className="d-lg-none fw-light">{`${data.dateStart} - ${data.dateEnd}`}</div>
+        <div className="h5 mb-1">{`${data.title}`}</div>
+        <div className="mb-1 mb-lg-2 fs-6">{`${data.institute}, ${data.location}`}</div>
+        <div className="mb-2 d-lg-none fw-light">{`${data.dateStart} - ${data.dateEnd}`}</div>
         <div className="mb-1" />
         {desc}
       </div>

@@ -26,7 +26,7 @@ const Cert = (props) => {
   }
   return (
     <div key={props.data.key} className="row mb-3">
-      <div className="col-lg-12 text-justify">
+      <div className="col-lg-12">
         <div className="h5 mb-0"><a href={props.data.link}>{`${props.data.title}`}</a></div>
         <div className="fs-6">{`${props.data.issuer}`}</div>
         <div className="fw-light">{`${props.data.dateAttained}`}</div>

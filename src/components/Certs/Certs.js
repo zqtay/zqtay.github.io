@@ -7,7 +7,9 @@ const Certs = (props) => {
     <SectionContainer id="certs">
       <div className="display-5" align="center">Certifications</div>
       <hr />
-      {certs.map((d, i) => <Cert data={d} key={i} />)}
+      <div className='row row-cols-1 row-cols-lg-2'>
+        {certs.map((d, i) => <Cert data={d} key={i} />)}
+      </div>
     </SectionContainer>
   );
 };
@@ -26,13 +28,10 @@ const Cert = (props) => {
   }
   return (
     <div key={props.data.key} className="row mb-3">
-      <div className="col-lg-12">
-        <div className="h5 mb-0"><a href={props.data.link}>{`${props.data.title}`}</a></div>
-        <div className="fs-6">{`${props.data.issuer}`}</div>
-        <div className="fw-light">{`${props.data.dateAttained}`}</div>
-        <div className="mb-1" />
-        {desc}
-      </div>
+      <div className="h5 mb-1"><a href={props.data.link}>{`${props.data.title}`}</a></div>
+      <div className="fs-6">{`${props.data.issuer}`}</div>
+      <div className="fw-light mb-1">{`${props.data.dateAttained}`}</div>
+      {desc}
     </div>
   );
 };

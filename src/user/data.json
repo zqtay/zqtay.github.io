@@ -76,16 +76,16 @@
         "level": "5"
       },
       {
+        "name": "Azure",
+        "level": "4"
+      },
+      {
         "name": "React.js",
         "level": "4"
       },
       {
         "name": "Typescript",
         "level": "4"
-      },
-      {
-        "name": "Azure",
-        "level": "3"
       },
       {
         "name": "Node.js",
@@ -182,6 +182,20 @@
     }
   ],
   "certifications": [
+    {
+      "title": "Microsoft Certified: Azure Developer Associate",
+      "issuer": "Microsoft",
+      "dateAttained": "May 2024",
+      "description": "Microsoft Azure, Cloud Computing, Serverless Computing",
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/ZQTay-9004/BF2C694B848D4D65?sharingId=FA1F4EE2E3C9F65E"
+    },
+    {
+      "title": "Microsoft Certified: Azure AI Fundamentals",
+      "issuer": "Microsoft",
+      "dateAttained": "May 2024",
+      "description": "Microsoft Azure, Artificial Intelligence",
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/ZQTay-9004/BECAB2597FB68F09?sharingId=FA1F4EE2E3C9F65E"
+    },
     {
       "title": "IBM Back-End Development Professional Certificate",
       "issuer": "Coursera (IBM)",

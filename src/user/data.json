@@ -21,6 +21,7 @@
         "location": "Singapore",
         "description": [
           "Developed a real-time flight operation dashboard that empowers ground operation monitoring and decision making.",
+          "Developed RESTful API gateway for flight services that standardizes and enhances integration across organization.",
           "Developed a culinary recipe repository app that enables knowledge retention and transfer for chefs.",
           "Proficient in designing and implementing cloud-native solutions using Azure, focusing on serverless computing for scalability and reliability.",
           "Conducted code reviews, provided technical guidance, and mentored junior developers to promote best practices and maintain code quality.",
@@ -183,18 +184,25 @@
   ],
   "certifications": [
     {
+      "title": "Microsoft Certified: DevOps Engineer Expert",
+      "issuer": "Microsoft",
+      "dateAttained": "Sep 2024",
+      "description": "Microsoft Azure, Azure DevOps, CI/CD",
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/ZQTay-9004/3465F99B38967CAD"
+    },
+    {
       "title": "Microsoft Certified: Azure Developer Associate",
       "issuer": "Microsoft",
       "dateAttained": "May 2024",
       "description": "Microsoft Azure, Cloud Computing, Serverless Computing",
-      "link": "https://learn.microsoft.com/api/credentials/share/en-us/ZQTay-9004/BF2C694B848D4D65?sharingId=FA1F4EE2E3C9F65E"
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/ZQTay-9004/BF2C694B848D4D65"
     },
     {
       "title": "Microsoft Certified: Azure AI Fundamentals",
       "issuer": "Microsoft",
       "dateAttained": "May 2024",
       "description": "Microsoft Azure, Artificial Intelligence",
-      "link": "https://learn.microsoft.com/api/credentials/share/en-us/ZQTay-9004/BECAB2597FB68F09?sharingId=FA1F4EE2E3C9F65E"
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/ZQTay-9004/BECAB2597FB68F09"
     },
     {
       "title": "IBM Back-End Development Professional Certificate",
